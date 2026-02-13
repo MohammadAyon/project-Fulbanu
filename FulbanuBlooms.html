@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+====================================================================
+FulbanuBlooms.html
+------------------
+Main HTML file for Fulbanu Blooms Boshonto Festival landing page.
+
+Author: Fulbanu Blooms Team
+Created: February 14, 2026
+Purpose:
+    - Provides structure and content for the festival landing page.
+    - Links to FulbanuBlooms.css for styles.
+    - Links to FulbanuBlooms.js for interactive functionality.
+
+References:
+    - Stylesheet: FulbanuBlooms.css
+    - JavaScript: FulbanuBlooms.js
+
+Sections:
+    1. Navigation
+    2. Hero Section
+    3. Bouquets Section
+    4. Love Quote Section
+    5. Location Section
+    6. Contact Section
+    7. FAQ
+    8. Footer
+    9. Modal
+====================================================================
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fulbanu Blooms - Celebrate Love This Boshonto | NSU Boshonto Festival</title>
+    <meta name="description" content="Handcrafted bouquets meet personalized love quotes at North South University's Boshonto Utshob. Pre-order your perfect spring bouquet for February 14-15, 2025.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Epilogue:wght@300;400;500;600&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="FulbanuBlooms.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span>🌸</span>
+                <span>Fulbanu Blooms</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#bouquets">Bouquets</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- WhatsApp FAB -->
+    <a href="https://wa.me/8801234567890" target="_blank" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div id="petals"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Celebrate Love This Boshonto</h1>
+                <p class="bengali-text bengali">এই বসন্তে ভালোবাসা উদযাপন করুন</p>
+                <p>Handcrafted bouquets meet personalized moments at North South University's Boshonto Utshob</p>
+                <div class="cta-group">
+                    <a href="#bouquets" class="btn btn-primary">Explore Bouquets ↓</a>
+                    <a href="#location" class="btn btn-secondary">Find Us 📍</a>
+                </div>
+                <div class="trust-badge">
+                    <div class="avatars">
+                        <div class="avatar">😊</div>
+                        <div class="avatar">💕</div>
+                        <div class="avatar">🌸</div>
+                    </div>
+                    <span><strong>100+ Happy Couples</strong></span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <span style="font-size: 20rem;">💐</span>
+            </div>
+        </div>
+        <div class="scroll-indicator">↓</div>
+    </section>
+
+    <!-- Bouquet Collection -->
+    <section class="bouquets reveal" id="bouquets">
+        <div class="section-title">
+            <h2>Our Collection</h2>
+            <p>Three tiers of love, crafted with care for your special moment</p>
+        </div>
+        <div class="bouquet-grid">
+            <div class="bouquet-card" onclick="openModal('sweet')">
+                <div class="bouquet-image">
+                    <span>🌹</span>
+                </div>
+                <div class="bouquet-info">
+                    <h3>Sweet Gesture</h3>
+                    <ul class="features">
+                        <li>2 Fresh Roses</li>
+                        <li>Hand-tied Ribbon</li>
+                        <li>Simple Elegance</li>
+                        <li>Free Love Quote Tag</li>
+                    </ul>
+                    <div class="price-row">
+                        <span class="price">৳ 350</span>
+                    </div>
+                    <p class="tagline">"Perfect for First Dates"</p>
+                    <button class="quick-view">Quick View</button>
+                </div>
+            </div>
+
+            <div class="bouquet-card" onclick="openModal('love')">
+                <div class="bouquet-image">
+                    <span>🌺</span>
+                    <div class="badge">Most Popular</div>
+                </div>
+                <div class="bouquet-info">
+                    <h3>Love Blooms</h3>
+                    <ul class="features">
+                        <li>3 Premium Flowers</li>
+                        <li>Decorative Fillers</li>
+                        <li>Artisan Ribbon</li>
+                        <li>Free Love Quote Tag</li>
+                    </ul>
+                    <div class="price-row">
+                        <span class="price">৳ 550</span>
+                    </div>
+                    <p class="tagline">"Our Festival Favorite"</p>
+                    <button class="quick-view">Quick View</button>
+                </div>
+            </div>
+
+            <div class="bouquet-card" onclick="openModal('eternal')">
+                <div class="bouquet-image">
+                    <span>💐</span>
+                </div>
+                <div class="bouquet-info">
+                    <h3>Eternal Promise</h3>
+                    <ul class="features">
+                        <li>3 Luxury Roses</li>
+                        <li>Premium Fillers</li>
+                        <li>Gold Tag + Wide Ribbon</li>
+                        <li>Handwritten Quote</li>
+                    </ul>
+                    <div class="price-row">
+                        <span class="price">৳ 750</span>
+                    </div>
+                    <p class="tagline">"Make It Unforgettable"</p>
+                    <button class="quick-view">Quick View</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Quote Experience -->
+    <section class="love-quote reveal" id="experience">
+        <div class="quote-container">
+            <div class="quote-illustration">
+                💌
+            </div>
+            <div class="quote-content">
+                <h2>Every Bouquet Tells a Story</h2>
+                <p>Receive a surprise personalized love quote handwritten on a golden tag — our gift to make your Boshonto magical</p>
+                
+                <div class="quote-carousel" id="quoteCarousel">
+                    <p class="quote-text">"In your eyes, I found my home; in your smile, my spring."</p>
+                    <p class="quote-author">— Sample Quote</p>
+                </div>
+                <div class="carousel-dots" id="carouselDots"></div>
+
+                <div class="value-props">
+                    <div class="value-prop">
+                        <span class="value-prop-icon">✨</span>
+                        <span class="value-prop-text">Personalized by our team</span>
+                    </div>
+                    <div class="value-prop">
+                        <span class="value-prop-icon">💌</span>
+                        <span class="value-prop-text">Hand-calligraphed</span>
+                    </div>
+                    <div class="value-prop">
+                        <span class="value-prop-icon">🎁</span>
+                        <span class="value-prop-text">Completely free</span>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" onclick="openModal('lottery')">Join the Lottery (Free!) →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section class="location reveal" id="location">
+        <div class="section-title">
+            <h2>Find Us at the Festival</h2>
+            <p>We'll be waiting for you at North South University's Boshonto Utshob</p>
+        </div>
+        <div class="location-grid">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.5357944864686!2d90.40695931498299!3d23.812179192450546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0c1a62af749%3A0x4a1e9d80e685ceed!2sNorth%20South%20University!5e0!3m2!1sen!2sbd!4v1644401234567!5m2!1sen!2sbd" loading="lazy"></iframe>
+            </div>
+            <div class="location-info">
+                <div class="info-card">
+                    <h3>📍 Location</h3>
+                    <p>North South University Campus<br>
+                    Boshonto Utshob Grounds<br>
+                    Stall #12 near Main Stage</p>
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        Festival Coming Soon!
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h3>🕐 Timing</h3>
+                    <p><strong>February 14-15, 2025</strong><br>
+                    10:00 AM — 6:00 PM<br>
+                    Both Days</p>
+                </div>
+                <div class="info-card">
+                    <h3>🚗 Getting Here</h3>
+                    <p>Easy access via campus entrances<br>
+                    Ample parking available<br>
+                    Close to public transport</p>
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;">Get Directions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact reveal" id="contact">
+        <div class="section-title">
+            <h2>Pre-Order or Ask Questions</h2>
+            <p>We're here to help make your Boshonto memorable</p>
+        </div>
+        <div class="contact-grid">
+            <a href="https://wa.me/8801234567890" target="_blank" class="contact-card">
+                <div class="contact-icon">💬</div>
+                <h3>WhatsApp</h3>
+                <p>Chat with us instantly for quick responses</p>
+            </a>
+            <a href="https://instagram.com/fulbanublooms" target="_blank" class="contact-card">
+                <div class="contact-icon">📸</div>
+                <h3>Instagram</h3>
+                <p>See our bouquets and happy couples</p>
+            </a>
+            <a href="mailto:hello@fulbanublooms.com" class="contact-card">
+                <div class="contact-icon">✉️</div>
+                <h3>Email</h3>
+                <p>Bulk orders and special requests welcome</p>
+            </a>
+        </div>
+
+        <div class="faq">
+            <h3 style="text-align: center; font-size: 2rem; margin-bottom: 2rem; font-family: 'Playfair Display', serif;">Frequently Asked Questions</h3>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Can I pre-order my bouquet?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! Message us on WhatsApp or Instagram to reserve your bouquet. We'll have it ready when you arrive at the festival.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Do you deliver?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>During the festival, we're exclusively at our stall. However, for bulk orders, we can arrange special delivery. Contact us for details!</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Can I customize my bouquet?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! While we offer three signature tiers, we're happy to customize flowers, colors, and arrangements. Just let us know your preferences when you order.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Are quotes available in Bengali?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We write love quotes in both English and Bengali. Let us know your preference when joining the lottery or placing your order.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-divider"></div>
+        <div class="footer-brand">🌸 Fulbanu Blooms 🌸</div>
+        <p class="footer-tagline">Spreading love, one bouquet at a time</p>
+        <div class="social-links">
+            <a href="https://instagram.com/fulbanublooms" target="_blank" aria-label="Instagram">📸</a>
+            <a href="https://facebook.com/fulbanublooms" target="_blank" aria-label="Facebook">📘</a>
+            <a href="https://wa.me/8801234567890" target="_blank" aria-label="WhatsApp">💬</a>
+        </div>
+        <p class="copyright">© 2025 Fulbanu Blooms — Crafted with ♥ for Boshonto</p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Bouquet Details</h2>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!--
+        JavaScript functionality is now in FulbanuBlooms.js
+        Visual styles are now in FulbanuBlooms.css
+    -->
+    <script src="FulbanuBlooms.js"></script>
+</body>
+</html>
