@@ -1,50 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-====================================================================
-FulbanuBlooms.html
-------------------
-Main HTML file for Fulbanu Blooms Boshonto Festival landing page.
-
-Author: Fulbanu Blooms Team
-Created: February 14, 2026
-Purpose:
-    - Provides structure and content for the festival landing page.
-    - Links to FulbanuBlooms.css for styles.
-    - Links to FulbanuBlooms.js for interactive functionality.
-
-References:
-    - Stylesheet: FulbanuBlooms.css
-    - JavaScript: FulbanuBlooms.js
-
-Sections:
-    1. Navigation
-    2. Hero Section
-    3. Bouquets Section
-    4. Love Quote Section
-    5. Location Section
-    6. Contact Section
-    7. FAQ
-    8. Footer
-    9. Modal
-====================================================================
--->
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Fulbanu Blooms - Celebrate Love This Boshonto | NSU Boshonto Festival</title>
     <meta name="description" content="Handcrafted bouquets meet personalized love quotes at North South University's Boshonto Utshob. Pre-order your perfect spring bouquet for February 14-15, 2025.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Epilogue:wght@300;400;500;600&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="FulbanuBlooms.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
             <div class="logo">
-                <span>🌸</span>
+                <img src="resources\fulbanu-logo.png" alt="Fulbanu Blooms" style="height: 40px; width: auto; object-fit: contain;">
                 <span>Fulbanu Blooms</span>
             </div>
             <ul class="nav-links">
@@ -332,10 +303,12 @@ Sections:
         </div>
     </div>
 
-    <!--
-        JavaScript functionality is now in FulbanuBlooms.js
-        Visual styles are now in FulbanuBlooms.css
-    -->
-    <script src="FulbanuBlooms.js"></script>
+    <!-- Mobile Sticky CTA Bar -->
+    <div class="mobile-cta-bar">
+        <a href="#location" class="btn btn-secondary" style="width: 100%; margin: 0;">Find Us 📍</a>
+        <a href="https://wa.me/8801234567890" target="_blank" class="btn btn-primary" style="width: 100%; margin: 0;">WhatsApp 💬</a>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
